@@ -1,0 +1,160 @@
+.about-section {
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  background-color: #f5f5f5;
+}
+
+.about-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.about-block.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Education Block Styles */
+.education-block {
+  position: relative;
+  height: 400px;
+  background-image: url("/public/assets/education1.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.education-overlay {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.3));
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+.light-text {
+  color: #fff;
+}
+
+.education-point {
+  color: wheat;
+  font-size: 1.1rem;
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+/* Hover effect */
+.education-block:hover .education-overlay {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.4));
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 50px 40px;
+  }
+
+  .education-overlay {
+    padding: 30px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-block,
+  .about-block.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p,
+  .education-point {
+    font-size: 1rem;
+  }
+
+  .about-image img {
+    max-width: 85%;
+  }
+
+  .education-block {
+    height: auto;
+    background-position: top;
+  }
+
+  .education-overlay {
+    padding: 30px 20px;
+  }
+
+  .light-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 40px 20px;
+  }
+
+  .about-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .education-point {
+    font-size: 0.95rem;
+  }
+
+  .light-text {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,117 @@
+.projects-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.projects-heading h1 {
+  font-size: 2.7rem;
+  background: linear-gradient(to right, #00bfff, #0070f3, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.projects-heading p {
+  font-size: 1.15rem;
+  color: #cccccc;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+.projects-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+    background-color: #111; 
+    color: #f5f5f5; 
+  }
+  
+  .projects-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+  }
+
+  .projects-container.animate-slide-fade {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .project-text {
+    flex: 1 1 350px;
+    max-width: 600px;
+  }
+  
+  .project-text h2 {
+    font-size: 2rem;
+    background: linear-gradient(to right, white, #0070f3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+
+  .project-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #0070f3;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    color: #00bfff;
+    text-decoration: underline;
+  }
+  
+  
+  .project-image {
+    flex: 1 1 350px;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .project-image img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: transform 0.4s ease, filter 0.4s ease;
+  }
+  
+  .project-image img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+  
+  
+  @media (max-width: 768px) {
+    .projects-container {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .project-text,
+    .project-image {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .project-text h2 {
+      font-size: 1.75rem;
+    }
+  }
+  

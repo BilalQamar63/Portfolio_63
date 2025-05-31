@@ -1,0 +1,147 @@
+.home-section {
+  position: relative;
+  overflow: hidden;
+  padding: 30px 50px;
+  background-color: #78cbe2;
+  display: flex;
+  justify-content: center;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 50px;
+  flex-wrap: wrap;
+  z-index: 1;
+  position: relative;
+}
+
+.home-text {
+  flex: 1;
+  min-width: 300px;
+  transition: transform 0.2s ease;
+}
+
+.home-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.home-text p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.home-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-image img {
+  width: 50%;
+  height: 450px;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: split-reveal 1.5s ease forwards;
+  transform: scale(1.2);
+  opacity: 0;
+}
+
+@keyframes split-reveal {
+  0% {
+    clip-path: inset(0 50% 0 50%);
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+.download-btn {
+    position: relative;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #529fb5;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #1a5261;
+    transition: left 0.4s ease;
+    z-index: -1;
+  }
+  
+  .download-btn:hover::before {
+    left: 0;
+  }
+  
+  .download-btn:hover {
+    color: #fff; 
+  }
+  
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .home-section {
+    padding: 30px 20px;
+  }
+
+  .home-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 30px; 
+  }
+
+  .home-text {
+    width: 100%;
+    transform: none !important; 
+  }
+
+  .home-text h1 {
+    font-size: 2rem;
+  }
+
+  .home-text p {
+    font-size: 1rem;
+  }
+
+  .home-image {
+    width: 100%;
+  }
+
+  .home-image img {
+    width: 80%;
+    height: auto;
+    max-height: 400px;
+    margin: 0 auto;
+  }
+}
+
+  
